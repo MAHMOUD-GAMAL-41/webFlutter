@@ -4,7 +4,7 @@ import 'package:petology/screens/home_screen.dart';
 import 'package:petology/screens/login_screen.dart';
 import 'package:petology/shared/appbar_components.dart';
 import 'package:petology/shared/footer.dart';
-import 'package:petology/utlis/navigation.dart';
+import 'package:petology/utils/navigation.dart';
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 

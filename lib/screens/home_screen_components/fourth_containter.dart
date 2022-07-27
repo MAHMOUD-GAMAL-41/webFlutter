@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -11,7 +12,7 @@ class FourthContainer extends StatefulWidget {
 class _FourthContainerState extends State<FourthContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 600,
       width: double.infinity,
       child: Padding(
@@ -40,7 +41,7 @@ class _FourthContainerState extends State<FourthContainer> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -49,7 +50,9 @@ class _FourthContainerState extends State<FourthContainer> {
                 InkWell(
                   onTap: () {
                     setState( () {
-                      print('cat1');
+                      if (kDebugMode) {
+                        print('cat1');
+                      }
                     });
                   },
                   child: Container(
@@ -73,17 +76,10 @@ class _FourthContainerState extends State<FourthContainer> {
                             color: HexColor('#492F24'),
                           )
                           ,),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         ElevatedButton(
-                            child: Text(
-                              "Read more",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: HexColor("#492F24"),
-                              ),
-                            ),
                             onPressed: () {},
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all<Color>(
@@ -95,19 +91,28 @@ class _FourthContainerState extends State<FourthContainer> {
                                         side: BorderSide( color: HexColor("#FFE3C5") )
                                     )
                                 )
+                            ),
+                            child: Text(
+                              "Read more",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: HexColor("#492F24"),
+                              ),
                             )
                         ),
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 InkWell(
                   onTap: () {
                     setState( () {
-                      print('dog 4');
+                      if (kDebugMode) {
+                        print('dog 4');
+                      }
                     });
                   },
                   child: Container(
@@ -131,17 +136,10 @@ class _FourthContainerState extends State<FourthContainer> {
                             color: HexColor('#492F24'),
                           )
                           ,),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         ElevatedButton(
-                            child: Text(
-                              "Read more",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: HexColor("#492F24"),
-                              ),
-                            ),
                             onPressed: () {},
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all<Color>(
@@ -153,19 +151,28 @@ class _FourthContainerState extends State<FourthContainer> {
                                         side: BorderSide( color: HexColor("#FFE3C5") )
                                     )
                                 )
+                            ),
+                            child: Text(
+                              "Read more",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: HexColor("#492F24"),
+                              ),
                             )
                         ),
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 InkWell(
                   onTap: () {
                     setState( () {
-                      print('dog 5');
+                      if (kDebugMode) {
+                        print('dog 5');
+                      }
                     });
                   },
                   child: Container(
@@ -189,17 +196,10 @@ class _FourthContainerState extends State<FourthContainer> {
                             color: HexColor('#492F24'),
                           )
                           ,),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         ElevatedButton(
-                            child: Text(
-                              "Read more",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: HexColor("#492F24"),
-                              ),
-                            ),
                             onPressed: () {},
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all<Color>(
@@ -211,6 +211,13 @@ class _FourthContainerState extends State<FourthContainer> {
                                         side: BorderSide( color: HexColor("#FFE3C5") )
                                     )
                                 )
+                            ),
+                            child: Text(
+                              "Read more",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: HexColor("#492F24"),
+                              ),
                             )
                         ),
                       ],
@@ -219,10 +226,18 @@ class _FourthContainerState extends State<FourthContainer> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(300, 50),
+                primary: HexColor("#492F24"),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32.0),
+                ),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -244,14 +259,6 @@ class _FourthContainerState extends State<FourthContainer> {
                     color: HexColor("#FFE3C5"),
                   )
                 ],
-              ),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                fixedSize: Size(300, 50),
-                primary: HexColor("#492F24"),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(32.0),
-                ),
               ),
             ),
           ],

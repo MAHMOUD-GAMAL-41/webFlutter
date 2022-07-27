@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -29,14 +30,15 @@ class FifthContainer extends StatelessWidget {
                     ),
                   ),
                 ),
-                Image.asset('assets/images/Icon material-pets right hand .png',
+                Image.asset(
+                  'assets/images/Icon material-pets right hand .png',
                   width: 50,
                   height: 50,
                   color: HexColor("#FFE3C5"),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Center(
@@ -44,41 +46,49 @@ class FifthContainer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: ()
-                    {
-                      print('food');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('food');
+                      }
                     },
-                    child: Image.asset('assets/images/pet food.png',
+                    child: Image.asset(
+                      'assets/images/pet food.png',
                       width: 100,
                       height: 100,
                     ),
                   ),
                   InkWell(
-                    onTap: ()
-                    {
-                      print('transporation');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('transporation');
+                      }
                     },
-                    child: Image.asset('assets/images/transport.png',
+                    child: Image.asset(
+                      'assets/images/transport.png',
                       width: 100,
                       height: 100,
                     ),
                   ),
                   InkWell(
-                    onTap: ()
-                    {
-                      print('toys');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('toys');
+                      }
                     },
-                    child: Image.asset('assets/images/toys.png',
+                    child: Image.asset(
+                      'assets/images/toys.png',
                       width: 100,
                       height: 100,
                     ),
                   ),
                   InkWell(
-                    onTap: ()
-                    {
-                      print('bowls and cups');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('bowls and cups');
+                      }
                     },
-                    child: Image.asset('assets/images/bowls.png',
+                    child: Image.asset(
+                      'assets/images/bowls.png',
                       width: 100,
                       height: 100,
                     ),
@@ -86,7 +96,7 @@ class FifthContainer extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Center(
@@ -94,31 +104,37 @@ class FifthContainer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: ()
-                    {
-                      print('inoculation');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('inoculation');
+                      }
                     },
-                    child: Image.asset('assets/images/inoculation.png',
+                    child: Image.asset(
+                      'assets/images/inoculation.png',
                       width: 100,
                       height: 100,
                     ),
                   ),
                   InkWell(
-                    onTap: ()
-                    {
-                      print('sleeping area');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('sleeping area');
+                      }
                     },
-                    child: Image.asset('assets/images/sleeping area.png',
+                    child: Image.asset(
+                      'assets/images/sleeping area.png',
                       width: 100,
                       height: 100,
                     ),
                   ),
                   InkWell(
-                    onTap: ()
-                    {
-                      print('vitamins');
+                    onTap: () {
+                      if (kDebugMode) {
+                        print('vitamins');
+                      }
                     },
-                    child: Image.asset('assets/images/vitamins.png',
+                    child: Image.asset(
+                      'assets/images/vitamins.png',
                       width: 100,
                       height: 100,
                     ),

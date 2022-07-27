@@ -1,33 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:petology/cubit/webcubit_cubit.dart';
-import 'package:petology/screens/adaption_screen.dart';
+import 'package:flutter/services.dart';
+import 'package:petology/screens/home_screen.dart';
+import 'package:petology/screens/login_screen.dart';
+import 'package:petology/screens/request_screen.dart';
 
-import '../screens/help_your_firend.dart';
+import '../screens/adaption_screen.dart';
 
-class AppRoot extends StatelessWidget {
+class AppRoot extends StatefulWidget {
   const AppRoot({Key? key}) : super(key: key);
 
   @override
+  State<AppRoot> createState() => _AppRootState();
+}
+
+class _AppRootState extends State<AppRoot> {
+  Offset pointer = Offset.zero;
+
+  @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => WebcubitCubit(),
-      child: MaterialApp(
-        home: Stack(children:[
-
-          HelpYourFriend(),
-        MouseRegion(
-
-          cursor: SystemMouseCursors.none,
-          child: Stack(
-            children: [
-
-            ],
-          ),
-        )
-        ]),
-        debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      home: MouseRegion(
+        cursor: SystemMouseCursors.none,
+        onExit: (eve) {
+          setState(() {
+            pointer = eve.position;
+          });
+        },
+        onEnter: (eve) {
+          setState(() {
+            pointer = eve.position;
+          });
+        },
+        onHover: (eve) {
+          setState(() {
+            pointer = eve.position;
+          });
+        },
+        child: Stack(
+          children: [
+            // const AdaptionScreen(),
+            LoginScreen(),
+            Positioned(
+              left: pointer.dx,
+              top: pointer.dy,
+              child: Image.asset(
+                'assets/images/cursor.png',
+                height: 30,
+                width: 50,
+              ),
+            ),
+          ],
+        ),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
